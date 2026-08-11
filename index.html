@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buku Materi — Millenial Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-brand">
+                <div class="logo">MA</div>
+                <div class="brand-text">
+                    <h1>Millenial Academy</h1>
+                    <span>Buku Materi Digital</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" id="btn-zoom-out" title="Zoom Out">−</button>
+                <span class="zoom-level" id="zoom-level">100%</span>
+                <button class="btn-icon" id="btn-zoom-in" title="Zoom In">+</button>
+                <button class="btn-icon" id="btn-fullscreen" title="Fullscreen">⛶</button>
+            </div>
+        </header>
+
+        <!-- Main Flipbook -->
+        <main class="flipbook-container">
+            <div class="flipbook" id="flipbook">
+                <!-- Pages will be injected by JS -->
+            </div>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn" id="btn-prev">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Sebelumnya</span>
+            </button>
+
+            <div class="page-indicator">
+                <span id="current-page">1</span>
+                <span class="sep">/</span>
+                <span id="total-pages">10</span>
+            </div>
+
+            <div class="nav-dots" id="nav-dots"></div>
+
+            <button class="nav-btn" id="btn-next">
+                <span>Selanjutnya</span>
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+        </nav>
+
+        <!-- Thumbnails Panel -->
+        <div class="thumbnails-panel" id="thumbnails-panel">
+            <div class="thumbnails-header">
+                <h3>Daftar Halaman</h3>
+                <button class="btn-close" id="btn-close-thumbs">✕</button>
+            </div>
+            <div class="thumbnails-grid" id="thumbnails-grid"></div>
+        </div>
+
+        <!-- TOC Panel -->
+        <div class="toc-panel" id="toc-panel">
+            <div class="toc-header">
+                <h3>Daftar Isi</h3>
+                <button class="btn-close" id="btn-close-toc">✕</button>
+            </div>
+            <ul class="toc-list" id="toc-list"></ul>
+        </div>
+
+        <!-- Floating Actions -->
+        <div class="fab-menu">
+            <button class="fab" id="fab-menu" title="Menu">☰</button>
+            <div class="fab-items" id="fab-items">
+                <button class="fab-item" id="fab-toc" title="Daftar Isi">📑</button>
+                <button class="fab-item" id="fab-thumbs" title="Thumbnail">🖼️</button>
+                <button class="fab-item" id="fab-first" title="Halaman Awal">⏮</button>
+                <button class="fab-item" id="fab-last" title="Halaman Akhir">⏭</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/flipbook.js"></script>
+</body>
+</html>
